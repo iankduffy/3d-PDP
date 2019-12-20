@@ -6,7 +6,7 @@ const DynamicComponentWithNoSSR = dynamic(
 )
 
 const ImageContainer = () => (
-  <div>
+  <div className="col-12@md col-6">
     <DynamicComponentWithNoSSR />
   </div>
 )

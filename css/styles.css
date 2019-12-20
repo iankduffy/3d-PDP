@@ -44,12 +44,6 @@ html {
   scroll-padding-top: 20px;
 }
 
-body {
-  max-width: 500px;
-  margin: 0 auto;
-  border: black solid 1px;
-}
-
 .container {
   margin: 0 auto;
   max-width: 1200px;
@@ -719,6 +713,10 @@ main {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
+}
+
+.u-height-500 {
+  height: 500px;
 }
 
 
@@ -5031,8 +5029,18 @@ h4,
   background: #EEEEEE;
 }
 
-.c-btn:hover {
-  background: rgba(238, 238, 238, 0.9);
+.c-btn--model {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  background-color: #223a57;
+  color: #fff;
+}
+
+.c-btn--model:hover {
+  background: rgba(34, 58, 87, 0.9);
 }
 
 .c-btn--container {
