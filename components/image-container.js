@@ -7,7 +7,7 @@ const DynamicComponentWithNoSSR = dynamic(
 )
 
 const ImageContainer = () => {
-  let [isModel, setModel] = useState(false)
+  let [isModel, setModel] = useState(true)
   let [image, setImage] = useState("/shirt.jpg")
 
   let updateImage = (e) => {
