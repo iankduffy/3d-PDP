@@ -7,7 +7,7 @@ const DynamicComponentWithNoSSR = dynamic(
 )
 
 const ImageContainer = () => {
-  let [isModel, setModel] = useState(true)
+  let [isModel, setModel] = useState(false)
   let [image, setImage] = useState("/shirt.jpg")
 
   let updateImage = (e) => {
@@ -22,9 +22,7 @@ const ImageContainer = () => {
       </div>
       <div className="col-2 col-12@md u-pad-h-xs@md-min container__row">
         <img className="col-2@md u-pad-r-sm@md u-pad-b-sm@md-min" src="/shirt.jpg" onClick={(e) => updateImage(e)}/>
-        <img className="col-2@md u-pad-r-sm@md u-pad-b-sm@md-min" src="/shirt.jpg" onClick={(e) => updateImage(e)}/>
-        <img className="col-2@md u-pad-r-sm@md u-pad-b-sm@md-min" src="/shirt.jpg" onClick={(e) => updateImage(e)}/>
-        <img className="col-2@md u-pad-r-sm@md" src="/box.png" onClick={() => setModel(true)}/>
+        <img className="col-2@md u-pad-r-sm@md" src="/box-3D-Message.png" onClick={() => setModel(true)}/>
       </div>
     </div>
     )
