@@ -1,0 +1,14 @@
+.o-link {
+  text-align: center;
+  color: $white;
+  background: $primary-color;
+  padding: 10px;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  vertical-align: 0;
+  transition: 500ms;
+  line-height: 0;
+  &:hover {
+    opacity: 0.8;
+  }
+}

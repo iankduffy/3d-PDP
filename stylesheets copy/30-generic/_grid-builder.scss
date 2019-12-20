@@ -1,0 +1,126 @@
+body{
+  max-width: 500px;
+  margin: 0 auto;
+  border: black solid 1px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $grid-length * 1px;
+  padding: 0 5px;
+  
+  &--fluid {
+    margin: 0;
+    max-width: 100%;
+    display: flex; 
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: flex-start;
+
+    &--v-center {
+      align-items: center;
+    }
+  }
+  
+  &__column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &--center{
+    justify-content: center; 
+  }
+
+  &--space-between{
+    justify-content: space-between;
+  }
+
+  &--space-evenly{
+    justify-content: space-between;
+    justify-content: space-evenly;
+  }
+}
+
+@for $i from 1 through $grid-cols {
+  .col-#{$i} {
+    width: (100 / ($grid-cols / $i)) * 1%;
+    flex: 0 1 (100 / ($grid-cols / $i)) * 1%;
+    // padding: 0 5px;
+  }
+
+  $sizesmq: xs, sm, md, lg; 
+
+  @each $mq, $size in $sizesmq {
+    .col-#{$i}\@#{$mq} {
+      @include breakpoint-max($mq) {
+        width: (100 / ($grid-cols / $i)) * 1%;
+        flex: 0 1 (100 / ($grid-cols / $i)) * 1%;
+        // padding: 0 5px;
+      }
+    }
+  }
+}
+
+.u-flex-grow {
+  flex-grow: 1;
+}
+
+.o-flex-al-stretch {
+  align-items: stretch;
+}
+
+.o-flex-al-self-bottom {
+  align-self: flex-end;
+}
+
+.u-flex--row-reverse {
+  flex-direction: row-reverse;
+}
+
+main {
+  margin-left: 100px;
+  display: block;
+
+  @include breakpoint-max(lg) {
+    margin-left: 0;
+    margin-bottom: 110px;
+  }
+}
+
+// Todo: Create mix in for this
+.flex-column-mobile {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  // align-items: flex-start;  
+  @include breakpoint-max(md) {
+    flex-direction: column;
+    align-items: center;  
+  }
+}
+
+.flex-column-tablet {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  // align-items: flex-start;  
+  @include breakpoint-max(lg) {
+    flex-direction: column;
+    align-items: center;  
+  }
+}
+
+.u-dis-flex {
+  display: flex;
+}
+
+.u-no-wrap {
+  @include breakpoint-min(md) {
+    flex-wrap: nowrap;
+  }
+}
