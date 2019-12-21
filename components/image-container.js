@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 const DynamicComponentWithNoSSR = dynamic(
   () => import('../components/model'),
-  { ssr: false }
+{ ssr: false, loading: () => <h2>Loading</h2>  }
 )
 
 const ImageContainer = () => {
