@@ -2,7 +2,7 @@
 
 const ProductInfo = () => {
   return (
-    <div className="col-12@md col-6 u-mar-v-md u-pad-l-sm">
+    <div className="col-12@md col-6 u-mar-v-md">
       <h3>Product Title</h3>
       <p className="h4">Product Price</p>
       <p>Description</p>

@@ -27,6 +27,7 @@ const ModelComp = () => {
         <div id="button-load" className="c-btn c-btn--model u-mar-v-sm u-mar-h-sm" slot="poster">Load 3D Model</div>
       </model-viewer>
     </div>
-)}
+  )
+}
 
 export default ModelComp
