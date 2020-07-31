@@ -13,7 +13,7 @@ const ModelComp = () => {
   const posterStyles = {
     width: '100%',
     height: '500px',
-    backgroundImage: 'url("/box.png")',
+    backgroundImage: 'url("/HUG-ARMCHAIR_1.jpg")',
     position: 'absolute', 
     top: "0", 
     left: '0',
